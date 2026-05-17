@@ -4,28 +4,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Registro de Eventos</title>
-  <style>
-    /* Estilos básicos para el formulario */
-    form {
-      width: 50%;
-      margin: auto;
-      padding: 20px;
-      border: 1px solid #ccc;
-      border-radius: 5px;
-    }
-    label {
-      display: block;
-      margin-bottom: 5px;
-    }
-    input, select, button {
-      width: 100%;
-      margin-bottom: 15px;
-      padding: 10px;
-      border: 1px solid #ccc;
-      border-radius: 5px;
-    }
-  </style>
+  <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
   <h1>Registro de Evento</h1>
   <form id="registroEvento">
@@ -60,28 +41,6 @@
     <button type="submit">Registrarse</button>
   </form>
 
-  <script>
-    document.getElementById('registroEvento').addEventListener('submit', function(event) {
-      event.preventDefault(); // Evita el envío automático del formulario
-
-      // Variables
-      const nombre = document.getElementById('nombre').value;
-      const correo = document.getElementById('correo').value;
-      const telefono = document.getElementById('telefono').value;
-      const intereses = document.querySelectorAll('input[name="intereses"]:checked');
-      const horario = document.querySelector('input[name="horario"]:checked');
-      const fecha = document.getElementById('fecha').value;
-      const hora = document.getElementById('hora').value;
-
-      // Validaciones básicas
-      if (!nombre || !correo || !telefono || intereses.length === 0 || !horario) {
-        alert('Por favor, completa todos los campos obligatorios.');
-        return;
-      }
-
-      // Si todo está bien
-      alert('Registro exitoso. ¡Gracias por registrarte!');
-    });
-  </script>
+  <script src="script.js"></script>
 </body>
 </html>
